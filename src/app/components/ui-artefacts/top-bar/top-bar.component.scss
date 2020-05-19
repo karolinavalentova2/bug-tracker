@@ -1,0 +1,74 @@
+@import "../../../../styles/general/colors";
+
+.top-bar {
+  position: fixed;
+  width: 100vw;
+  height: 5rem;
+  background-color: $color-darkest-grey;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+
+  &__logo {
+    color: $tertiary-color-green;
+    min-width: 20rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__search {
+    padding-left: 6rem;
+    width: 60%;
+    min-width: 15rem;
+    max-width: 50rem;
+
+    input {
+      width: 100%;
+      padding: 0.5rem 1rem;
+
+      &::placeholder {
+        color: $color-medium-grey;
+      }
+    }
+  }
+
+  &__user-overview {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+
+    &__text {
+      color: white;
+      text-align: end;
+    }
+
+    &__icons {
+      display: flex;
+      margin-right: 2rem;
+
+      .top-bar-icon {
+        width: 2.5rem;
+        height: 3rem;
+        margin-left: 1rem;
+      }
+    }
+  }
+}
+
+.wd-track-logo {
+  width: 8rem;
+}
+
+.par-topBar-l {
+  font-size: 1.3rem;
+  padding-bottom: 0.2rem;
+}
+
+.par-topBar-s {
+  color: $color-veryLight-grey;
+  font-size: 1.1rem;
+}
+
+

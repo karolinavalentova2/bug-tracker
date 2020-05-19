@@ -1,0 +1,76 @@
+@import "../../../../styles/general/colors";
+
+.side-navigation {
+  position: fixed;
+  left: 0;
+  top: 5rem;
+  width: 20rem;
+  height: calc(100vh - 5rem);
+  background-color: $color-dark-grey;
+  color: $color-light-grey;
+  padding: 2rem 0;
+
+  p {
+    font-size: 1.5rem;
+  }
+
+  &__separator {
+    margin: 1.5rem;
+    width: auto;
+    height: .2rem;
+    background-color: $color-mediumDark-grey;
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    justify-content: space-between;
+
+    .pathfinder {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__collapsible {
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+
+    &__subtitle {
+      display: flex;
+      align-items: center;
+      padding: .7rem 4rem;
+
+      .pathfinder {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+      }
+
+      p {
+        font-size: 1.3rem;
+        color: $color-medium-grey;
+      }
+    }
+  }
+}
+
+.collapsible-visible {
+  padding-bottom: 2rem;
+  height: auto;
+  visibility: visible;
+  opacity: 1;
+  transition: all .3s;
+}
+
+.collapse-trigger {
+  cursor: pointer;
+}
+
+.nav-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 1rem;
+}

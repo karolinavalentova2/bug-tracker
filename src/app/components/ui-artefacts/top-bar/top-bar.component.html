@@ -1,0 +1,26 @@
+<div class="top-bar">
+  <div class="top-bar__logo">
+    <img class="wd-track-logo" src="../../../../assets/wd-track-logo.png" alt="wd-track-logo">
+  </div>
+  <div class="top-bar__search">
+    <label>
+      <input type="text" placeholder="Search..">
+    </label>
+  </div>
+  <div class="top-bar__user-overview">
+    <div class="top-bar__user-overview__text">
+      <p class="par-topBar-l">Karolina Valentova</p>
+      <p class="par-topBar-s">Admin</p>
+    </div>
+    <div class="top-bar__user-overview__icons">
+      <svg class="top-bar-icon">
+        <use [attr.xlink:href]="[icons.userProfileIcon]" [ngClass]="{'svg-fill': true}"></use>
+      </svg>
+      <button class="">
+        <svg class="top-bar-icon">
+          <use [attr.xlink:href]="[icons.signOutIcon]" [ngClass]="{'svg-fill': true}"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
