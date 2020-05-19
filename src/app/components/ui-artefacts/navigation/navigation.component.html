@@ -2,7 +2,8 @@
   <a
     class="side-navigation__title"
     routerLink="/inbox"
-    routerLinkActive="">
+    routerLinkActive="side-navigation__title__highlight">
+    <div routerLinkActive="highlighter"></div>
     <div class="pathfinder">
       <button>
         <svg class="nav-icon">
@@ -17,7 +18,8 @@
   <a
     class="side-navigation__title"
     routerLink="/projects"
-    routerLinkActive="">
+    routerLinkActive="side-navigation__title__highlight">
+    <div routerLinkActive="highlighter"></div>
     <div class="pathfinder">
       <button>
         <svg class="nav-icon">
@@ -29,13 +31,19 @@
     <button class="collapse-trigger">
       <svg
         class="arrow-icon"
+        routerLink="/projects"
+        routerLinkActive="arrow-icon__rotate"
         [ngClass]="{'arrow-icon__rotate': collapsibleState === 1}"
         (click)="toggleCollapsible(1)">
         <use [attr.xlink:href]="[icons.arrowIcon]" [ngClass]="{'svg-fill__l-Grey': true}"></use>
       </svg>
     </button>
   </a>
-  <div class="side-navigation__collapsible" [ngClass]="{'collapsible-visible': collapsibleState === 1}">
+  <div
+    class="side-navigation__collapsible"
+    routerLink="/projects"
+    routerLinkActive="collapsible-visible"
+    [ngClass]="{'collapsible-visible': collapsibleState === 1 }">
     <div class="side-navigation__collapsible__subtitle">
       <a><p>My projects</p></a>
     </div>
@@ -53,7 +61,8 @@
   <a
     class="side-navigation__title"
     routerLink="/users"
-    routerLinkActive="">
+    routerLinkActive="side-navigation__title__highlight">
+    <div routerLinkActive="highlighter"></div>
     <div class="pathfinder">
       <button class="collapse-trigger">
         <svg class="nav-icon">
@@ -65,13 +74,19 @@
     <button class="collapse-trigger">
       <svg
         class="arrow-icon"
+        routerLink="/users"
+        routerLinkActive="arrow-icon__rotate"
         [ngClass]="{'arrow-icon__rotate': collapsibleState === 2}"
         (click)="toggleCollapsible(2)">
         <use [attr.xlink:href]="[icons.arrowIcon]" [ngClass]="{'svg-fill__l-Grey': true}"></use>
       </svg>
     </button>
   </a>
-  <div class="side-navigation__collapsible" [ngClass]="{'collapsible-visible': collapsibleState === 2}">
+  <div
+    class="side-navigation__collapsible"
+    routerLink="/users"
+    routerLinkActive="collapsible-visible"
+    [ngClass]="{'collapsible-visible': collapsibleState === 2}">
     <div class="side-navigation__collapsible__subtitle">
       <a><p>All users</p></a>
     </div>
@@ -88,7 +103,8 @@
   <a
     class="side-navigation__title"
     routerLink="/settings"
-    routerLinkActive="">
+    routerLinkActive="side-navigation__title__highlight">
+    <div routerLinkActive="highlighter"></div>
     <div class="pathfinder">
       <button>
         <svg class="nav-icon">

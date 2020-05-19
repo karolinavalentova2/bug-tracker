@@ -24,12 +24,30 @@
   &__title {
     display: flex;
     align-items: center;
-    padding: 1rem 1.5rem;
+    height: 4rem;
+    padding: 0 1.5rem;
     justify-content: space-between;
+
+    &__highlight {
+      background-color: $color-mediumDark-grey;
+    }
 
     .pathfinder {
       display: flex;
       align-items: center;
+      width: 100%;
+
+      button {
+        padding: 1rem;
+      }
+    }
+
+    .highlighter {
+      height: inherit;
+      width: .5rem;
+      position: absolute;
+      left: 0;
+      background-color: $tertiary-color-green;
     }
   }
 
@@ -41,7 +59,8 @@
     &__subtitle {
       display: flex;
       align-items: center;
-      padding: .7rem 4rem;
+      height: 3rem;
+      padding: 0 4rem;
 
       .pathfinder {
         display: flex;
