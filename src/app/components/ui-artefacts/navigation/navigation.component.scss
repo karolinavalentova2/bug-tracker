@@ -37,8 +37,35 @@
       align-items: center;
       width: 100%;
 
-      button {
-        padding: 1rem;
+      .notification {
+        position: absolute;
+        width: 1rem;
+        height: 1rem;
+        border-radius: 5rem;
+        background-color: $tertiary-color-red;
+        margin-left: 1rem;
+        margin-top: -.5rem;
+        animation: pulse 1s infinite;
+
+        @-webkit-keyframes pulse {
+          0% {-webkit-box-shadow: 0 0 0 0 rgba(246,102,121,.4);}
+          70% {-webkit-box-shadow: 0 0 0 10px rgba(246,102,121,0);}
+          100% {-webkit-box-shadow: 0 0 0 0 rgba(246,102,121,0);}
+        }
+        @keyframes pulse {
+          0% {
+            -moz-box-shadow: 0 0 0 0 rgba(246,102,121,.4);
+            box-shadow: 0 0 0 0 rgba(246,102,121,.4);
+          }
+          70% {
+            -moz-box-shadow: 0 0 0 10px rgba(246,102,121,0);
+            box-shadow: 0 0 0 10px rgba(246,102,121,0);
+          }
+          100% {
+            -moz-box-shadow: 0 0 0 0 rgba(246,102,121,0);
+            box-shadow: 0 0 0 0 rgba(246,102,121,0);
+          }
+        }
       }
     }
 
