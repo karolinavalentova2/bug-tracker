@@ -1,0 +1,7 @@
+main {
+  margin-left: 20rem;
+  margin-top: 9rem;
+  width: calc(100vw - 20rem); // the main view is moved due to the navigation
+  min-height: calc(100vh - 9rem); // the main view is moved due to the top bar and breadcrumb
+}
+

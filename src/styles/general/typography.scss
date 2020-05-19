@@ -1,0 +1,12 @@
+/* EXAMPLE OF THE NAMING
+elementName__weight, regular weight is by default
+__m = medium
+__t = thin
+__sm = semibold
+..etc
+ */
+
+.header1__m {
+  font-size: 3rem;
+  font-weight: 500;
+}

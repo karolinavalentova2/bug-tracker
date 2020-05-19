@@ -1,0 +1,16 @@
+<div *ngIf="!isLoginVisible; else loginView">
+  <header>
+    <app-top-bar></app-top-bar>
+    <app-breadcrumb></app-breadcrumb>
+  </header>
+  <aside>
+    <app-navigation></app-navigation>
+  </aside>
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+</div>
+
+<ng-template #loginView>
+  <app-login></app-login>
+</ng-template>

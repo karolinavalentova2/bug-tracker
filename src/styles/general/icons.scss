@@ -1,0 +1,12 @@
+@import "./colors";
+
+.arrow-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: all .3s;
+
+  &__rotate {
+    transform: rotate(-180deg);
+    transition: all .3s;
+  }
+}

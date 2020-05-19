@@ -1,0 +1,23 @@
+$color-white: #fff;
+$color-darker-white: #f2f3f7;
+$color-veryLight-grey: #DADCE1;
+$color-light-grey: #D5D5D5;
+$color-medium-grey: #8D93A4;
+$color-mediumDark-grey: #565C6E;
+$color-dark-grey: #2F313B;
+$color-darkest-grey: #222831;
+
+$tertiary-color-green: #73D3BE;
+$tertiary-color-green-dark: #2EC9A7;
+$tertiary-color-blue: #668CF6;
+$tertiary-color-blue-dark: #4773EC;
+$tertiary-color-red: #F66679;
+$tertiary-color-red: #EC4B60;
+
+.svg-fill {
+  fill: $color-white;
+
+  &__l-Grey {
+    fill: $color-light-grey;
+  }
+}
