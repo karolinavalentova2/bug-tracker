@@ -1,0 +1,109 @@
+@import "../../../../styles/general/colors";
+@import "../../../../styles/general/forms";
+
+.login {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  padding: 8rem 10rem;
+  justify-content: space-between;
+
+  &__header {
+    width: 50%;
+
+    .login-logo {
+      width: 20rem;
+    }
+
+    .illustration {
+      width: 100%;
+      margin-top: 5rem;
+      max-width: 70rem;
+    }
+
+    .login-quote {
+      color: $tertiary-color-blue-dark;
+      max-width: 70rem;
+
+      p {
+        text-align: end;
+        margin-top: 2rem;
+      }
+    }
+  }
+
+  &__form {
+    width: 32%;
+    display: flex;
+    justify-content: center;
+    color: $color-medium-grey;
+
+    form {
+      width: 35rem;
+      height: fit-content;
+      background-color: $color-darker-white;
+      text-align: center;
+      padding: 3rem;
+      margin-top: 15rem;
+    }
+
+    &__credentials {
+      text-align: left;
+
+      input {
+        width: 100%;
+        padding: 1.2rem 1rem;
+        margin-top: 2rem;
+
+        &::placeholder {
+          color: $color-medium-grey
+        }
+      }
+    }
+
+    &__settings {
+      text-align: left;
+
+      &__checkbox {
+        display: flex;
+        align-items: center;
+        padding: 1rem 0;
+      }
+
+      a {
+        color: $tertiary-color-blue;
+      }
+    }
+
+    &__button {
+      &__login {
+        width: 100%;
+        padding: 1.2rem;
+        background: $tertiary-color-blue;
+        color: $color-white;
+        margin-top: 5rem;
+        margin-bottom: 2rem;
+        font-size: 2rem;
+        font-weight: 600;
+      }
+
+      &__google {
+        margin: 2rem 0;
+        justify-content: center;
+        display: flex;
+      }
+    }
+  }
+}
+
+.login__background {
+  background-color: $tertiary-color-blue;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 60%;
+  z-index: -1;
+  transform: skew(20deg, 0deg);
+}
+

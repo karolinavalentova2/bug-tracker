@@ -1,0 +1,33 @@
+<a
+  *ngIf="categoryInfo.title !== 'Separator'"
+  class="side-navigation__title"
+  [ngClass]="{'side-navigation__title__highlight': isActive}">
+  <div [ngClass]="{'highlighter': isParentActive}"></div>
+  <div class="pathfinder" (click)="navigationService.doNavigate(categoryInfo.path)">
+    <button>
+      <svg class="nav-icon">
+        <use [attr.xlink:href]="[icons[categoryInfo.path] || '']" [ngClass]="{'svg-fill': true}"></use>
+      </svg>
+    </button>
+    <p>{{categoryInfo.title}}</p>
+  </div>
+  <button
+    class="collapse-trigger"
+    (click)="toggleCollapsible()">
+    <svg
+      class="arrow-icon"
+      *ngIf="categoryInfo.entries"
+      [ngClass]="{'arrow-icon__rotate': isActive}">
+      <use [attr.xlink:href]="[icons.arrowIcon]" [ngClass]="{'svg-fill__l-Grey': true}"></use>
+    </svg>
+  </button>
+</a>
+
+<div
+  class="side-navigation__collapsible"
+  *ngIf="categoryInfo.entries;"
+  [ngClass]="{'collapsible-visible': isActive}">
+  <app-sub-navigation-entry *ngFor="let entry of categoryInfo.entries" [path]="entry.path" [name]="entry.name" [activePath]="currentActivePath"></app-sub-navigation-entry>
+</div>
+
+<div *ngIf="categoryInfo.title === 'Separator'" class="side-navigation__separator"></div>

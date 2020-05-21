@@ -1,10 +1,10 @@
 export const IconsURIs = {
   // navigation
   arrowIcon: '/assets/iconsSVG/navigation.svg#arrowIcon',
-  projectsIcon: '/assets/iconsSVG/navigation.svg#projectsIcon',
-  usersIcon: '/assets/iconsSVG/navigation.svg#usersIcon',
-  settingsIcon: '/assets/iconsSVG/navigation.svg#settingsIcon',
-  inboxIcon: '/assets/iconsSVG/navigation.svg#inboxIcon',
+  '/projects': '/assets/iconsSVG/navigation.svg#projectsIcon',
+  '/users': '/assets/iconsSVG/navigation.svg#usersIcon',
+  '/settings': '/assets/iconsSVG/navigation.svg#settingsIcon',
+  '/inbox': '/assets/iconsSVG/navigation.svg#inboxIcon',
 
   //  top bar
   userProfileIcon: '/assets/iconsSVG/top-bar.svg#userProfileIcon',
