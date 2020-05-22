@@ -87,6 +87,7 @@
       align-items: center;
       height: 3rem;
       padding: 0 4rem;
+      background-color: $color-darkest-grey;
 
       .highlighter {
         height: inherit;
@@ -108,7 +109,6 @@
       }
 
       p {
-        font-size: 1.3rem;
         color: $color-medium-grey;
       }
     }

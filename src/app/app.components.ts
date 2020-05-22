@@ -11,6 +11,13 @@ import {SettingsComponent} from './components/views/settings/settings.component'
 import {MyProjectsComponent} from './components/views/projects/my-projects/my-projects.component';
 import {SubNavigationComponent} from './components/ui-artefacts/navigation/sub-navigation/sub-navigation.component';
 import {SubNavigationEntryComponent} from './components/ui-artefacts/navigation/sub-navigation/sub-navigation-entry/sub-navigation-entry.component';
+import {ActiveProjectsComponent} from './components/views/projects/active-projects/active-projects.component';
+import {CompletedProjectsComponent} from './components/views/projects/completed-projects/completed-projects.component';
+import {AddNewProjectComponent} from './components/views/projects/add-new-project/add-new-project.component';
+import {StatusToggleComponent} from './components/ui-artefacts/status-toggle/status-toggle.component';
+import {AllUsersComponent} from './components/views/users/all-users/all-users.component';
+import {MyProfileComponent} from './components/views/users/my-profile/my-profile.component';
+import {AddNewUserComponent} from './components/views/users/add-new-user/add-new-user.component';
 
 export const Components: Array<any> = [
   LoginComponent,
@@ -26,4 +33,11 @@ export const Components: Array<any> = [
   SideFilterComponent,
   SubNavigationComponent,
   SubNavigationEntryComponent,
+  ActiveProjectsComponent,
+  CompletedProjectsComponent,
+  AddNewProjectComponent,
+  StatusToggleComponent,
+  AllUsersComponent,
+  MyProfileComponent,
+  AddNewUserComponent,
 ];

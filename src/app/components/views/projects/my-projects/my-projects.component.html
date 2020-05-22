@@ -1,1 +1,39 @@
-<p>my-projects works!</p>
+<app-side-filter></app-side-filter>
+<div class="my-projects">
+  <div class="my-projects__header">
+    <div class="my-projects__header__headline">
+      <h1 class="header3__m">My projects</h1>
+      <p class="par3__s">Recent projects in the past 7 days</p>
+    </div>
+    <div class="my-projects__header__buttons">
+      <button class="add-new-button">Create new project</button>
+    </div>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>Managed by</th>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Users</th>
+        <th>Issues</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let project of mocktableProject">
+        <td class="table-profile">
+          <svg class="table-profile__icon">
+            <use [attr.xlink:href]="[icons.userProfileIcon]" [ngClass]="{'svg-fill__m-Grey': true}"></use>
+          </svg>
+          <p class="par3__s">{{project.managedBy}}</p>
+        </td>
+        <td><p>{{project.id}}</p></td>
+        <td><p>{{project.name}}</p></td>
+        <td><p>{{project.users.length}}</p></td>
+        <td><p>{{project.issues.length}}</p></td>
+        <td><p><app-status-toggle></app-status-toggle></p></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

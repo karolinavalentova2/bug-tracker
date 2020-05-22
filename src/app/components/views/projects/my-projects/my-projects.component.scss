@@ -1,0 +1,72 @@
+@import "../../../../../styles/general/colors";
+
+.my-projects {
+  width: 100%;
+  padding: 3rem 5rem;
+
+  &__header {
+    padding-bottom: 4rem;
+    display: flex;
+    justify-content: space-between;
+
+    &__headline {
+      h1 {
+        color: $color-dark-grey;
+        padding-bottom: 1rem;
+      }
+
+      p {
+        color: $color-medium-grey;
+      }
+    }
+
+    &__buttons {
+
+    }
+  }
+}
+
+table {
+  text-align: left;
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 80rem;
+
+  thead {
+    tr {
+      border-bottom: 0.2rem solid $color-veryDark-grey;
+
+      th {
+        padding: 1rem 0;
+        font-size: 1.5rem;
+        font-weight: 500;
+        min-width: 6rem;
+      }
+    }
+  }
+
+  tbody {
+    color: $color-mediumDark-grey;
+
+    tr {
+      border-bottom: 0.1rem solid $color-veryLight-grey;
+
+      td {
+        padding: .5rem 0;
+        font-size: 1.3rem;
+        min-width: 6rem;
+      }
+    }
+  }
+
+  .table-profile {
+    display: flex;
+    align-items: center;
+
+    &__icon {
+      width: 3rem;
+      height: 3rem;
+      margin-right: 1rem;
+    }
+  }
+}

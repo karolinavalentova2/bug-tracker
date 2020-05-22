@@ -1,8 +1,14 @@
 @import "../../../../styles/general/colors";
 
-.sub-navigation {
-  background-color: $color-veryLight-grey;
-  width: 15rem;
+.side-filter {
+  background-color: $color-darker-white;
+  border-right: 0.1rem solid #DADCE1;
+  width: 17rem;
   height: calc(100vh - 9rem); // the height is moved due the top bar and breadcrumb
-  margin-top: 4rem;
+  padding: 2rem;
+
+  &__entry {
+    padding-bottom: 1rem;
+    color: $color-mediumDark-grey;
+  }
 }
