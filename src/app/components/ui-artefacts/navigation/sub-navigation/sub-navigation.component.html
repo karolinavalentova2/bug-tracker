@@ -4,6 +4,7 @@
   [ngClass]="{'side-navigation__title__highlight': isActive}">
   <div [ngClass]="{'highlighter': isParentActive}"></div>
   <div class="pathfinder" (click)="navigationService.doNavigate(categoryInfo.path)">
+    <span class="notification" *ngIf="icons['/inbox']"></span>
     <button>
       <svg class="nav-icon">
         <use [attr.xlink:href]="[icons[categoryInfo.path] || '']" [ngClass]="{'svg-fill': true}"></use>

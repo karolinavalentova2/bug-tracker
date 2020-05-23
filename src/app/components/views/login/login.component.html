@@ -4,28 +4,43 @@
     <img class="login-logo" src="../../../../assets/wd-track-logo.png" alt="wd-track-logo">
     <div class="login-quote">
       <h3 class="header3__m">Don't be intimidated by what you don't know"</h3>
-      <p class="par2__s">- Sara Blakely</p>
+      <p class="par2">- Sara Blakely</p>
     </div>
     <img class="illustration" src="../../../../assets/side-img-header-1.png" alt="illustration">
   </div>
   <div class="login__form">
-    <form action="">
+    <form [formGroup]="formVal" (submit)="onSubmit()">
       <h3 class="header2__m">User login</h3>
-      <div class="login__form__credentials">
+      <div class="login__form__credentials" (click)="loginFailed = false">
         <label for="email"></label>
-        <input type="email" id="email" placeholder="Email.." required="">
+        <input
+          type="email"
+          id="email"
+          placeholder="Email.."
+          required
+          formControlName="submitedEmail"
+          [ngClass]="{'failHighlight': loginFailed}">
         <label for="password"></label>
-        <input type="password" id="password" placeholder="Password.." required="">
+        <input
+          type="password"
+          id="password"
+          placeholder="Password.."
+          required
+          formControlName="submitedPassword"
+          [ngClass]="{'failHighlight': loginFailed}">
       </div>
       <div class="login__form__settings">
         <div class="login__form__settings__checkbox">
           <input class="input-checkbox" type="checkbox" id="rememberPassword" name="rememberPassword">
-          <label class="par2__s" for="rememberPassword">Remember your password</label>
+          <label class="par2" for="rememberPassword">Remember your password</label>
         </div>
-        <a><p class="par2__s">Forgot your password?</p></a>
+        <a><p class="par2">Forgot your password?</p></a>
       </div>
-      <button class="login__form__button__login" type="submit">Login</button>
-      <p class="par2__s">Or</p>
+      <div class="login__form__button__login">
+        <button class="login__form__button__login">Login</button>
+        <p class="par2" *ngIf="loginFailed">Incorrect email or password</p>
+      </div>
+      <p class="par2">Or</p>
       <div class="login__form__button__google" id="my-signin2"></div>
     </form>
   </div>

@@ -20,17 +20,21 @@ __sm = semibold
 
 }
 
-.par2__s {
+.par2 {
   font-size: 1.2rem;
   font-weight: 400;
 }
 
-.par3__s {
+.par3 {
   font-size: 1.3rem;
   font-weight: 400;
+
+  &__m {
+    font-weight: 500;
+  }
 }
 
-.par5__s {
+.par5 {
   font-size: 1.5rem;
   font-weight: 400;
 }

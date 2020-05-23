@@ -18,6 +18,7 @@ import {StatusToggleComponent} from './components/ui-artefacts/status-toggle/sta
 import {AllUsersComponent} from './components/views/users/all-users/all-users.component';
 import {MyProfileComponent} from './components/views/users/my-profile/my-profile.component';
 import {AddNewUserComponent} from './components/views/users/add-new-user/add-new-user.component';
+import {NotificationComponent} from './components/views/inbox/notification/notification.component';
 
 export const Components: Array<any> = [
   LoginComponent,
@@ -40,4 +41,5 @@ export const Components: Array<any> = [
   AllUsersComponent,
   MyProfileComponent,
   AddNewUserComponent,
+  NotificationComponent,
 ];

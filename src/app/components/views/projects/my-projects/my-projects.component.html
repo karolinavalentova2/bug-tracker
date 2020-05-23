@@ -1,11 +1,11 @@
 <app-side-filter></app-side-filter>
-<div class="my-projects">
-  <div class="my-projects__header">
-    <div class="my-projects__header__headline">
+<div class="main-view">
+  <div class="main-view__header">
+    <div class="main-view__header__headline">
       <h1 class="header3__m">My projects</h1>
-      <p class="par3__s">Recent projects in the past 7 days</p>
+      <p class="par3">Recent projects in the past 7 days</p>
     </div>
-    <div class="my-projects__header__buttons">
+    <div class="main-view__header__buttons">
       <button class="add-new-button">Create new project</button>
     </div>
   </div>
@@ -26,10 +26,10 @@
           <svg class="table-profile__icon">
             <use [attr.xlink:href]="[icons.userProfileIcon]" [ngClass]="{'svg-fill__m-Grey': true}"></use>
           </svg>
-          <p class="par3__s">{{project.managedBy}}</p>
+          <p class="par3">{{project.managedBy}}</p>
         </td>
         <td><p>{{project.id}}</p></td>
-        <td><p>{{project.name}}</p></td>
+        <td><p class="par3__m">{{project.name}}</p></td>
         <td><p>{{project.users.length}}</p></td>
         <td><p>{{project.issues.length}}</p></td>
         <td><p><app-status-toggle></app-status-toggle></p></td>

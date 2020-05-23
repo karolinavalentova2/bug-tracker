@@ -1,31 +1,5 @@
 @import "../../../../../styles/general/colors";
 
-.my-projects {
-  width: 100%;
-  padding: 3rem 5rem;
-
-  &__header {
-    padding-bottom: 4rem;
-    display: flex;
-    justify-content: space-between;
-
-    &__headline {
-      h1 {
-        color: $color-dark-grey;
-        padding-bottom: 1rem;
-      }
-
-      p {
-        color: $color-medium-grey;
-      }
-    }
-
-    &__buttons {
-
-    }
-  }
-}
-
 table {
   text-align: left;
   border-collapse: collapse;
@@ -34,7 +8,7 @@ table {
 
   thead {
     tr {
-      border-bottom: 0.2rem solid $color-veryDark-grey;
+      border-bottom: 0.1rem solid $color-veryDark-grey;
 
       th {
         padding: 1rem 0;
