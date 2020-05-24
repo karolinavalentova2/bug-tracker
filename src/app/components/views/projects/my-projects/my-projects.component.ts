@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {IconsURIs} from '../../../../models/icons';
-import {mocktableProject} from 'src/app/models/mockData';
+import {mockTableProject} from 'src/app/models/mockDataModels/mockTableProject';
 
 @Component({
   selector: 'app-my-projects',
@@ -9,9 +9,7 @@ import {mocktableProject} from 'src/app/models/mockData';
 })
 export class MyProjectsComponent implements OnInit {
   icons = IconsURIs;
-  mocktableProject = mocktableProject;
-
-  usersTotal = new Set();
+  mocktableProject = mockTableProject;
 
   constructor() { }
 

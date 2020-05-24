@@ -1,0 +1,32 @@
+<tr class="inbox__entry">
+  <td class="inbox__entry__date">
+    <p class="par3">{{notifInfo.date | date}}</p>
+  </td>
+  <td class="inbox__entry__sender">
+    <div class="table-profile">
+      <svg class="table-profile__icon">
+        <use [attr.xlink:href]="[icons.userProfileIcon]" [ngClass]="{'svg-fill__m-Grey': true}"></use>
+      </svg>
+      <p class="par3">{{notifInfo.sender.name}}</p>
+    </div>
+  </td>
+  <td class="inbox__entry__description">
+<!--    -->
+    <div *ngIf="notifInfo.type === 'newProject'">
+      <p class="par3">{{notifInfo.description}}&nbsp;</p>
+      <p class="par3 inbox__entry__description__blue">{{notifInfo.project.name}}</p>
+    </div>
+<!--   -->
+    <div *ngIf="notifInfo.type === 'issue'">
+      <p class="par3">{{notifInfo.description}}&nbsp;</p>
+      <p class="par3 inbox__entry__description__blue">{{notifInfo.issue.name}}</p>
+    </div>
+<!--    -->
+    <div *ngIf="notifInfo.type === 'assignedToProject'">
+      <p class="par3">{{notifInfo.description}}&nbsp;</p>
+      <p class="par3 inbox__entry__description__blue">{{notifInfo.project.name}}</p>
+    </div>
+  </td>
+</tr>
+<!--<p class="par3"> of a project </p>-->
+

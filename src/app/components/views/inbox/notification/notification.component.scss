@@ -1,0 +1,28 @@
+@import "../../../../../styles/general/colors";
+
+.inbox__entry {
+  border-bottom: .1rem solid $color-veryLight-grey;
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+
+  td {
+    margin: .5rem 1rem .5rem 0;
+  }
+
+  &__date {
+    width: 10rem;
+  }
+
+  &__sender {
+    width: 15rem;
+  }
+
+  &__description {
+    display: flex;
+
+    &__blue {
+      color: $tertiary-color-blue;
+    }
+  }
+}

@@ -44,8 +44,8 @@ export const navPaths = [
         name: 'My profile',
       },
       {
-        path: '/add-new-profile',
-        name: 'Add new profile',
+        path: '/add-new-user',
+        name: 'Add new user',
       }
     ]
   },

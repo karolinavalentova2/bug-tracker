@@ -1,6 +1,6 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {Subscription} from 'rxjs';
-import {navPaths} from 'src/app/models/navigationPaths';
+import {navPaths} from 'src/app/models/mockDataModels/navigationPaths';
 
 @Component({
   selector: 'app-navigation',

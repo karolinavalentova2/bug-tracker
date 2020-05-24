@@ -6,5 +6,12 @@
       <p class="par3">Active, unread notifications</p>
     </div>
   </div>
-  <p>inbox-works</p>
+<!--  <div class="inbox">-->
+<!--    <app-notification *ngFor="let notifEntry of mockNotification" [notifInfo]="notifEntry"></app-notification>-->
+<!--  </div>-->
+  <table class="inbox">
+    <tbody>
+      <app-notification *ngFor="let notifEntry of mockNotification" [notifInfo]="notifEntry"></app-notification>
+    </tbody>
+  </table>
 </div>

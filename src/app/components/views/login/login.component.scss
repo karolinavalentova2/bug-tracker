@@ -72,7 +72,7 @@
 
       .failHighlight {
         border: .1rem solid $tertiary-color-red;
-        animation: .3s shake ease-in-out .5s;
+        animation: .3s shake ease-in-out .3s;
       }
 
       @keyframes shake {
