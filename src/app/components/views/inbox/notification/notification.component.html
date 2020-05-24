@@ -11,22 +11,51 @@
     </div>
   </td>
   <td class="inbox__entry__description">
-<!--    -->
+    <!-- Created new project 'project'  -->
     <div *ngIf="notifInfo.type === 'newProject'">
-      <p class="par3">{{notifInfo.description}}&nbsp;</p>
-      <p class="par3 inbox__entry__description__blue">{{notifInfo.project.name}}</p>
+      <p class="par3">{{notifInfo.description}}&nbsp;
+        <span class="par3 inbox__entry__description__blue">{{notifInfo.project.name}}</span>
+      </p>
     </div>
-<!--   -->
-    <div *ngIf="notifInfo.type === 'issue'">
-      <p class="par3">{{notifInfo.description}}&nbsp;</p>
-      <p class="par3 inbox__entry__description__blue">{{notifInfo.issue.name}}</p>
-    </div>
-<!--    -->
+    <!-- You have been assigned as 'position' to a project 'project' -->
     <div *ngIf="notifInfo.type === 'assignedToProject'">
-      <p class="par3">{{notifInfo.description}}&nbsp;</p>
-      <p class="par3 inbox__entry__description__blue">{{notifInfo.project.name}}</p>
+      <p class="par3">{{notifInfo.description}}&nbsp;
+        <span class="par3 inbox__entry__description__green-dark">{{notifInfo.position}}&nbsp;</span>
+        <span class="par3">to a project&nbsp;</span>
+        <span class="par3 inbox__entry__description__blue">{{notifInfo.project.name}}</span>
+      </p>
+    </div>
+    <!-- You have been assigned as 'position' to an 'issue' of project 'project' -->
+    <div *ngIf="notifInfo.type === 'assignedToIssue'">
+      <p class="par3">{{notifInfo.description}}&nbsp;
+        <span class="par3 inbox__entry__description__green-dark">{{notifInfo.position}}&nbsp;</span>
+        <span class="par3">to an issue&nbsp;</span>
+        <span class="par3 inbox__entry__description__blue">{{notifInfo.issue.name}}&nbsp;</span>
+        <span class="par3">of project&nbsp;</span>
+        <span class="par3 inbox__entry__description__blue">{{notifInfo.project.name}}</span>
+      </p>
+    </div>
+    <!-- Created new 'issue' of project 'project' -->
+    <div *ngIf="notifInfo.type === 'newIssue'">
+      <p class="par3">{{notifInfo.description}}&nbsp;
+        <span class="par3 inbox__entry__description__blue">{{notifInfo.issue.name}}&nbsp;</span>
+        <span class="par3">of a project&nbsp;</span>
+        <span class="par3 inbox__entry__description__blue">{{notifInfo.project.name}}</span>
+      </p>
+    </div>
+    <!-- Deleted an 'issue' of project 'project' -->
+    <div *ngIf="notifInfo.type === 'deletedIssue'">
+      <p class="par3">{{notifInfo.description}}&nbsp;
+        <span class="par3 inbox__entry__description__blue">{{notifInfo.issue.name}}&nbsp;</span>
+        <span class="par3">of a project&nbsp;</span>
+        <span class="par3 inbox__entry__description__blue">{{notifInfo.project.name}}</span>
+      </p>
+    </div>
+    <!-- Deleted project 'project' -->
+    <div *ngIf="notifInfo.type === 'deletedProject'">
+      <p class="par3">{{notifInfo.description}}&nbsp;
+        <span class="par3 inbox__entry__description__blue">{{notifInfo.project.name}}</span>
+      </p>
     </div>
   </td>
 </tr>
-<!--<p class="par3"> of a project </p>-->
-

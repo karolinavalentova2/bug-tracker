@@ -15,14 +15,22 @@
   }
 
   &__sender {
-    width: 15rem;
+    width: 18rem;
   }
 
   &__description {
     display: flex;
+    width: calc(100% - 28rem); // the width is set by deducting the date and sender width
+
+    div {
+      display: flex;
+    }
 
     &__blue {
       color: $tertiary-color-blue;
+    }
+    &__green-dark {
+      color: $tertiary-color-green-dark;
     }
   }
 }

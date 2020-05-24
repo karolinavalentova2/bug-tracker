@@ -1,6 +1,6 @@
 <div class=wrapper>
   <div class="checkbox-toggle">
     <input type="checkbox" class="checkbox-toggle__switch" [checked]="isChecked" (click)="doToggleCheckbox()">
-    <span class="text text1" [ngClass]="{'text2': !isChecked}">{{isChecked ? "Disabled" : 'Active'}}</span>
+    <span class="text text1" (click)="doToggleCheckbox()" [ngClass]="{'text2': !isChecked}">{{isChecked ? "Disabled" : 'Active'}}</span>
   </div>
 </div>

@@ -2,6 +2,11 @@
 
 .inbox {
   width: 100%;
-  //background-color: pink;
   border: .1rem solid $color-veryLight-grey;
+
+  tbody {
+    max-height: 68vh;
+    display: block;
+    overflow-y: scroll;
+  }
 }

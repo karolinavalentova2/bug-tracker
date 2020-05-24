@@ -6,6 +6,7 @@
   width: 17rem;
   height: calc(100vh - 9rem); // the height is moved due the top bar and breadcrumb
   padding: 2rem;
+  position: fixed;
 
   &__entry {
     padding-bottom: 1rem;
