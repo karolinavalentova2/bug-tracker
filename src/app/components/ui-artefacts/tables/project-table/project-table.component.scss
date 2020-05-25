@@ -1,0 +1,35 @@
+@import "../../../../../styles/general/colors";
+
+.table-project {
+  text-align: left;
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 80rem;
+
+  thead {
+    tr {
+      border-bottom: 0.1rem solid $color-veryDark-grey;
+
+      th {
+        padding: 1rem 0;
+        font-size: 1.5rem;
+        font-weight: 500;
+        min-width: 6rem;
+      }
+    }
+  }
+
+  tbody {
+    color: $color-mediumDark-grey;
+
+    tr {
+      border-bottom: 0.1rem solid $color-veryLight-grey;
+
+      td {
+        padding: .5rem 0;
+        font-size: 1.3rem;
+        min-width: 6rem;
+      }
+    }
+  }
+}

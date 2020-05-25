@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {mockTableProject} from '../../../../models/mockDataModels/mockTableProject';
 
 @Component({
   selector: 'app-completed-projects',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./completed-projects.component.scss']
 })
 export class CompletedProjectsComponent implements OnInit {
-
+  mocktableProject = mockTableProject;
   constructor() { }
 
   ngOnInit(): void {

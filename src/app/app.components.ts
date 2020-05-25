@@ -19,6 +19,7 @@ import {AllUsersComponent} from './components/views/users/all-users/all-users.co
 import {MyProfileComponent} from './components/views/users/my-profile/my-profile.component';
 import {AddNewUserComponent} from './components/views/users/add-new-user/add-new-user.component';
 import {NotificationComponent} from './components/views/inbox/notification/notification.component';
+import {ProjectTableComponent} from './components/ui-artefacts/tables/project-table/project-table.component';
 
 export const Components: Array<any> = [
   LoginComponent,
@@ -42,4 +43,5 @@ export const Components: Array<any> = [
   MyProfileComponent,
   AddNewUserComponent,
   NotificationComponent,
+  ProjectTableComponent,
 ];

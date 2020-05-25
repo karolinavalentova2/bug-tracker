@@ -9,11 +9,11 @@ import {mockTableProject} from 'src/app/models/mockDataModels/mockTableProject';
 })
 export class MyProjectsComponent implements OnInit {
   icons = IconsURIs;
+  isChecked: boolean;
   mocktableProject = mockTableProject;
 
   constructor() { }
 
   ngOnInit(): void {
   }
-
 }

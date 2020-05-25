@@ -151,7 +151,7 @@ export const mockTableProject = [
         department: 'client',
       },
     ],
-    status: true,
+    status: false,
   },
   {
     id: 33,
@@ -328,5 +328,67 @@ export const mockTableProject = [
       },
     ],
     status: true,
+  },
+  {
+    id: 33,
+    link: 'www.wdtrack.wiredelta.com',
+    name: 'Nike e-shop',
+    created: new Date(),
+    issues: [
+      {
+        id: 17,
+        name: 'Video does not work',
+        created: new Date(),
+        status: 'pending',
+      },
+      {
+        id: 17,
+        name: 'Mobile responsive issue',
+        created: new Date(),
+        status: 'pending',
+      },
+      {
+        id: 17,
+        name: 'Mobile responsive issue',
+        created: new Date(),
+        status: 'pending',
+      },
+      {
+        id: 17,
+        name: 'Mobile responsive issue',
+        created: new Date(),
+        status: 'pending',
+      },
+      {
+        id: 17,
+        name: 'Mobile responsive issue',
+        created: new Date(),
+        status: 'pending',
+      },
+      {
+        id: 17,
+        name: 'Mobile responsive issue',
+        created: new Date(),
+        status: 'pending',
+      },
+    ],
+    managedBy: 'Philip Hampson Knight',
+    users: [
+      {
+        name: 'Bart Simpson',
+        phone: '+45 117233',
+        email: 'bartsimpson@gmail.com',
+        imageUrl: '',
+        department: 'development',
+      },
+      {
+        name: 'Meggie Simpson',
+        phone: '+45 117923',
+        email: 'meggiesimpson@gmail.wd.dk',
+        imageUrl: '',
+        department: 'development',
+      },
+    ],
+    status: false,
   },
 ];

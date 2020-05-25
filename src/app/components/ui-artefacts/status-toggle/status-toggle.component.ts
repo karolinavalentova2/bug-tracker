@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {mockTableProject} from '../../../models/mockDataModels/mockTableProject';
 
 @Component({
   selector: 'app-status-toggle',
@@ -6,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./status-toggle.component.scss']
 })
 export class StatusToggleComponent implements OnInit {
-  isChecked: boolean;
+  @Input() isChecked: boolean;
+  mocktableProject = mockTableProject;
 
   constructor() { }
 

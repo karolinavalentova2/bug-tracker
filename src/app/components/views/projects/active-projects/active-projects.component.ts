@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {mockTableProject} from '../../../../models/mockDataModels/mockTableProject';
 
 @Component({
   selector: 'app-active-projects',
@@ -6,10 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./active-projects.component.scss']
 })
 export class ActiveProjectsComponent implements OnInit {
-
+  mocktableProject = mockTableProject;
   constructor() { }
 
   ngOnInit(): void {
   }
-
 }

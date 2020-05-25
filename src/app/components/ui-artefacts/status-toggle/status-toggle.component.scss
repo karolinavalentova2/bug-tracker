@@ -19,7 +19,7 @@
     appearance: none;
     display: flex;
     align-items: center;
-    width: 100%;
+    width: 10rem;
     height: 2.5rem;
     padding: .5rem;
     background: $tertiary-color-blue;
@@ -44,7 +44,7 @@
       transition: all .2s ease-in-out;
 
       &:after {
-        transform: translateX(7.2rem);
+        transform: translateX(calc(7.5rem));
       }
     }
   }
