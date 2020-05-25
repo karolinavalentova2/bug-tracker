@@ -1,0 +1,12 @@
+version: 1.0.{build}
+build_cloud: Process
+image: Linux
+clone_script:
+- sh: sudo rm -rf /var/www/karolinavalentova.me/depl/ && sudo mkdir /var/www/karolinavalentova.me/depl && sudo git clone https://github.com/karolinavalentova2/bug-tracker.git /var/www/karolinavalentova.me/depl/
+environment:
+  NG_CLI_ANALYTICS: false
+build: off
+test: off
+deploy_script:
+- sh: sudo rm -rf /var/www/karolinavalentova.me/html/bug-tracker/* && cd /var/www/karolinavalentova.me/depl/docs && sudo mv * /var/www/karolinavalentova.me/html/bug-tracker
+...

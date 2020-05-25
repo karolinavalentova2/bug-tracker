@@ -2,6 +2,7 @@ import {AfterViewInit, Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup} from '@angular/forms';
 import {Router} from '@angular/router';
 import {LoginService} from '../../../services/login.service';
+import {NavigationService} from '../../../services/navigation.service';
 declare const gapi;
 @Component({
   selector: 'app-login',
@@ -21,7 +22,7 @@ export class LoginComponent implements OnInit, AfterViewInit {
     submitedPassword: new FormControl(''),
 });
 
-  constructor(private router: Router,
+  constructor(private navService: NavigationService,
               public logingService: LoginService) { }
 
   ngOnInit(): void {
@@ -29,9 +30,8 @@ export class LoginComponent implements OnInit, AfterViewInit {
 
   onSubmit() {
     if (this.tempEmail === this.formVal.value.submitedEmail && this.tempPassword === this.formVal.value.submitedPassword) {
-      console.log('logged in');
-      this.router.navigate(['/projects']);
       this.logingService.doEmitLoginStatus(true);
+      this.navService.doNavigate('/my-projects');
     } else {
       console.log('wrong credentials');
       this.loginFailed = true;

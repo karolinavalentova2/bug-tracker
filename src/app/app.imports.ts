@@ -5,7 +5,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 export const Imports = [
   BrowserModule,
-  RouterModule.forRoot(RouterPaths),
+  RouterModule.forRoot(RouterPaths, { useHash: true }),
   FormsModule,
   ReactiveFormsModule
 ];
