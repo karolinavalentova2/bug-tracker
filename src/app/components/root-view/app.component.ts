@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {Subscription} from 'rxjs';
 import {LoginService} from '../../services/login.service';
 
@@ -7,7 +7,7 @@ import {LoginService} from '../../services/login.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, OnDestroy {
   title = 'bug-tracker';
   isLoginVisible = true;
   showLogin: Subscription;
@@ -20,5 +20,9 @@ export class AppComponent implements OnInit {
       .subscribe(status => {
         this.isLoginVisible = !status;
       });
+  }
+
+  ngOnDestroy(): void {
+    this.showLogin.unsubscribe();
   }
 }

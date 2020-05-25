@@ -14,7 +14,7 @@ import {AddNewUserComponent} from './components/views/users/add-new-user/add-new
 
 export const RouterPaths: Routes = [
   { path: 'login', component: LoginComponent },
-  { path: 'projects', component: ProjectsComponent },
+  { path: 'projects', redirectTo: 'my-projects', component: ProjectsComponent },
   { path: 'my-projects', component: MyProjectsComponent },
   { path: 'active-projects', component: ActiveProjectsComponent },
   { path: 'completed-projects', component: CompletedProjectsComponent },
