@@ -12,6 +12,7 @@ import {MyProfileComponent} from './components/views/users/my-profile/my-profile
 import {AddNewUserComponent} from './components/views/users/add-new-user/add-new-user.component';
 
 export const RouterPaths: Routes = [
+  { path: '**', redirectTo: 'login'},
   { path: 'login', component: LoginComponent },
   { path: 'projects', redirectTo: 'my-projects' },
   { path: 'my-projects', component: MyProjectsComponent },
