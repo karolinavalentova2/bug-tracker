@@ -4,7 +4,6 @@ import {NavigationComponent} from './components/ui-artefacts/navigation/navigati
 import {TopBarComponent} from './components/ui-artefacts/top-bar/top-bar.component';
 import {BreadcrumbComponent} from './components/ui-artefacts/breadcrumb/breadcrumb.component';
 import {SideFilterComponent} from './components/ui-artefacts/side-filter/side-filter.component';
-import {ProjectsComponent} from './components/views/projects/projects.component';
 import {InboxComponent} from './components/views/inbox/inbox.component';
 import {UsersComponent} from './components/views/users/users.component';
 import {SettingsComponent} from './components/views/settings/settings.component';
@@ -27,7 +26,6 @@ export const Components: Array<any> = [
   NavigationComponent,
   TopBarComponent,
   BreadcrumbComponent,
-  ProjectsComponent,
   InboxComponent,
   UsersComponent,
   SettingsComponent,
