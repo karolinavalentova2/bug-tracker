@@ -24,7 +24,6 @@
     padding: .5rem;
     background: $tertiary-color-blue;
     border-radius: 100px;
-    //box-shadow: 0 2px 10px #d1cfcf;
     position: relative;
     cursor: pointer;
     outline: none;
@@ -45,7 +44,7 @@
       transition: all .2s ease-in-out;
 
       &:after {
-        transform: translateX(7.5rem);
+        transform: translateX(7.2rem);
       }
     }
   }

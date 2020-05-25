@@ -12,6 +12,7 @@
 
   p {
     font-size: 1.5rem;
+    cursor: pointer;
   }
 
   &__separator {
@@ -36,6 +37,7 @@
       display: flex;
       align-items: center;
       width: 100%;
+      cursor: pointer;
 
       .notification {
         position: absolute;
@@ -110,6 +112,7 @@
 
       p {
         color: $color-medium-grey;
+        cursor: pointer;
       }
     }
   }
@@ -131,4 +134,5 @@
   width: 1.5rem;
   height: 1.5rem;
   margin-right: 1rem;
+  cursor: pointer;
 }

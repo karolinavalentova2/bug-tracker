@@ -13,7 +13,7 @@ export class LoginComponent implements OnInit, AfterViewInit {
   isLoginVisible: boolean;
   loginFailed: boolean;
 
-  tempEmail = 'test@email.com';
+  tempEmail = 'email@email.com';
   tempPassword = 'password';
 
   formVal = new FormGroup({
