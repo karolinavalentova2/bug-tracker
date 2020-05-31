@@ -1,6 +1,5 @@
 import {AfterViewInit, Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup} from '@angular/forms';
-import {Router} from '@angular/router';
 import {LoginService} from '../../../services/login.service';
 import {NavigationService} from '../../../services/navigation.service';
 declare const gapi;

@@ -14,20 +14,23 @@ export class SubNavigationComponent implements OnInit {
     title: string;
     entries: Array<any>
   };
-
   parentChildrenPaths = new Set();
 
   isActive = false;
+
   isParentActive = false;
-
   navigationSub: Subscription;
-  icons = IconsURIs;
 
+  icons = IconsURIs;
   currentActivePath: string;
 
   constructor(public navigationService: NavigationService) { }
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
+    this.doSetup();
+  }
+
+  private doSetup() {
     if (this.categoryInfo.title !== 'Separator') {
       if (this.categoryInfo.entries) {
         this.categoryInfo.entries.forEach(entry => {
@@ -36,22 +39,32 @@ export class SubNavigationComponent implements OnInit {
       }
 
       this.navigationSub = this.navigationService.doListenToNavigationPathChanges()
-        .subscribe(async path => {
-          if (!this.categoryInfo.entries && path.includes(this.categoryInfo.path)) {
-            this.isActive = true;
-            this.isParentActive = true;
-          } else {
-            this.isActive = false;
-            this.isParentActive = false;
-            this.doDecideIfActive(path);
-          }
-        });
+        .subscribe(this.doHandleNavigationPathChanged.bind(this));
+
+      const tempPath = this.navigationService.doReturnLastActiveURLPath();
+      if (tempPath) {
+        this.doDecideIfActive(tempPath);
+      }
     }
   }
 
+  private async doHandleNavigationPathChanged(path: string): Promise<void> {
+    try {
+      if (!this.categoryInfo.entries && path.includes(this.categoryInfo.path)) {
+        this.isActive = true;
+        this.isParentActive = true;
+      } else {
+        this.isActive = false;
+        this.isParentActive = false;
+        this.doDecideIfActive(path);
+      }
+    } catch (e) {
+      console.error(e);
+    }
+  }
 
   private doDecideIfActive(path) {
-    if (path.includes(this.categoryInfo.path)) {
+    if (path.includes(this.categoryInfo.path)) { // FYI: This redirects the window to the first child of a parent if the parent is clicked
       this.navigationService.doNavigate(this.categoryInfo.entries[0].path);
       return;
     }
@@ -63,8 +76,7 @@ export class SubNavigationComponent implements OnInit {
     }
   }
 
-
-  toggleCollapsible() {
+  public toggleCollapsible() {
     this.navigationService.doNavigate(this.categoryInfo.path);
   }
 

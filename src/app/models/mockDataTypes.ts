@@ -49,3 +49,8 @@ export class NotificationEntry {
   };
   position?: string;
 }
+
+export class BreadcrumbData {
+  name: string;
+  path: string;
+}
