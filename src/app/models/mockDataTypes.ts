@@ -61,6 +61,7 @@ export class FilterEntry {
   name: string;
   property: string;
   value: any;
+  isDefaultSelected?: boolean;
 }
 
 export class FilterConfig {

@@ -13,8 +13,8 @@ export class ActiveProjectsComponent implements OnInit, OnDestroy {
   mocktableProject = mockTableProject;
 
   public filterConfig: FilterConfig = {
-    prop: 'recentEdit',
-    value: true,
+    prop: null,
+    value: null,
   };
   public filterEntries: FilterEntry[] = [];
 
@@ -42,6 +42,7 @@ export class ActiveProjectsComponent implements OnInit, OnDestroy {
         name: 'All projects',
         property: null,
         value: null,
+        isDefaultSelected: true,
       }
     ];
 

@@ -39,6 +39,7 @@ export class MyProjectsComponent implements OnInit, OnDestroy {
         name: 'Recent projects',
         property: 'recentEdit',
         value: true,
+        isDefaultSelected: true,
       },
       {
         name: 'All projects',

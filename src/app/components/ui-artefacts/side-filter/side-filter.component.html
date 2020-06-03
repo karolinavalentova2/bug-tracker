@@ -1,3 +1,5 @@
 <div class="side-filter">
-  <p class="par3 side-filter__entry" *ngFor="let label of labels"><a (click)="doFilterBy(label.property, label.value)">{{label.name}}</a></p>
+  <p class="par3 side-filter__entry" *ngFor="let label of labels" [ngClass]="{'highlightText': label.name === selectState}">
+    <a (click)="doFilterBy(label.property, label.value, label.name)">{{label.name}}</a>
+  </p>
 </div>
