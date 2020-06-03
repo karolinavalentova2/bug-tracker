@@ -32,6 +32,7 @@ export class InboxComponent implements OnInit, OnDestroy {
         name: 'Active',
         property: 'isConfirmed',
         value: false,
+        isDefaultSelected: true,
       },
       {
         name: 'Archived',
