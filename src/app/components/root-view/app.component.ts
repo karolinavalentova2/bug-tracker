@@ -9,7 +9,7 @@ import {LoginService} from '../../services/login.service';
 })
 export class AppComponent implements OnInit, OnDestroy {
   title = 'bug-tracker';
-  isLoginVisible = false;
+  isLoginVisible = true;
   showLogin: Subscription;
 
   constructor(private loggingService: LoginService) {
