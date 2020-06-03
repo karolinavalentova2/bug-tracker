@@ -1,6 +1,9 @@
-export const mockTableProject = [
+import {Project} from '../mockDataTypes';
+
+export const mockTableProject: Array<Project> = [
   {
     id: 33,
+    recentEdit: false,
     link: 'www.wdtrack.wiredelta.com',
     name: 'TimerV3',
     created: new Date(),
@@ -40,6 +43,7 @@ export const mockTableProject = [
   },
   {
     id: 33,
+    recentEdit: true,
     link: 'growcarrots.dk',
     name: 'growcarrots.dk',
     created: new Date(),
@@ -90,6 +94,7 @@ export const mockTableProject = [
     status: true,
   },
   {
+    recentEdit: true,
     id: 33,
     link: 'www.pmiiqos/shop.dk',
     name: 'PMI Iqos - e-shop',
@@ -154,6 +159,7 @@ export const mockTableProject = [
     status: false,
   },
   {
+    recentEdit: true,
     id: 33,
     link: 'www.wdtrack.wiredelta.com',
     name: 'TimerV3',
@@ -192,6 +198,7 @@ export const mockTableProject = [
     status: true,
   },
   {
+    recentEdit: false,
     id: 33,
     link: 'www.wdtrack.wiredelta.com',
     name: 'Bobs burgers',
@@ -230,6 +237,7 @@ export const mockTableProject = [
     status: true,
   },
   {
+    recentEdit: false,
     id: 33,
     link: 'www.wdtrack.wiredelta.com',
     name: 'TimerV3',
@@ -268,6 +276,7 @@ export const mockTableProject = [
     status: true,
   },
   {
+    recentEdit: false,
     id: 33,
     link: 'www.wdtrack.wiredelta.com',
     name: 'Nike e-shop',
@@ -330,6 +339,7 @@ export const mockTableProject = [
     status: true,
   },
   {
+    recentEdit: false,
     id: 33,
     link: 'www.wdtrack.wiredelta.com',
     name: 'Nike e-shop',

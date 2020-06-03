@@ -1,4 +1,3 @@
 <div class="breadcrumb">
-<!--  <p class="par3" *ngFor="let entry of data; index as i;" (click)="doGoTo(entry.path)">{{entry.name}}</p>-->
-  <p>Breadcrumb</p>
+  <p class="par3" *ngFor="let entry of data; index as i;"><a (click)="doGoTo(entry.path)">{{entry.name}} {{i === data.length - 1 ? '' : '&nbsp;>&nbsp;'}}</a></p>
 </div>

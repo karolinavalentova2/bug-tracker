@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {BreadcrumbData} from '../../../models/mockDataTypes';
 import {Subscription} from 'rxjs';
 import {NavigationService} from '../../../services/navigation.service';
@@ -8,37 +8,24 @@ import {NavigationService} from '../../../services/navigation.service';
   templateUrl: './breadcrumb.component.html',
   styleUrls: ['./breadcrumb.component.scss']
 })
-export class BreadcrumbComponent implements OnInit {
-  private data: Array<BreadcrumbData>;
+export class BreadcrumbComponent implements OnInit, OnDestroy {
+  public data: Array<BreadcrumbData>;
   private pathSub: Subscription;
   constructor(private navService: NavigationService) { }
 
   ngOnInit(): void {
-    this.data = [
-      {
-        name: 'test',
-        path: '',
-      },
-      {
-        name: 'test2',
-        path: '',
-      },
-      {
-        name: 'test3',
-        path: '',
-      }
-    ];
-    // this.pathSub = this.navService.doListenToNavigationPathChanges().subscribe(res => {
-    //
-    // })
-  }
-
-  private doRenderBreadcrumbData(path) {
-
+    this.data = [];
+    this.pathSub = this.navService.doListenBreadcrumbForData().subscribe(entries => {
+      this.data = entries;
+    });
   }
 
   public doGoTo(path) {
+    this.navService.doNavigate(path);
+  }
 
+  ngOnDestroy(): void {
+    this.pathSub.unsubscribe();
   }
 
 }

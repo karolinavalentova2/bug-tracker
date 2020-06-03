@@ -1,13 +1,13 @@
-<app-side-filter></app-side-filter>
+<app-side-filter [labels]="filterEntries" (filterConfig)="doListenToFilterChanged($event)"></app-side-filter>
 <div class="main-view">
   <div class="main-view__header">
     <div class="main-view__header__headline">
       <h1 class="header3__m">Active projects</h1>
-      <p class="par3">All active registered projects</p>
+      <p class="par3">{{filterConfig.value === true ? "Recently edited completed projects" : "All active registered projects"}}</p>
     </div>
     <div class="main-view__header__buttons">
       <button class="add-new-button">Create new project</button>
     </div>
   </div>
-  <app-project-table [Projects]="mocktableProject" [showOn]="{property: 'status', value: true}"></app-project-table>
+  <app-project-table [Projects]="mocktableProject" [showOn]="{property: 'status', value: true}" [filterConfig]="filterConfig"></app-project-table>
 </div>

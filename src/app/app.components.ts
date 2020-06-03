@@ -19,6 +19,7 @@ import {MyProfileComponent} from './components/views/users/my-profile/my-profile
 import {AddNewUserComponent} from './components/views/users/add-new-user/add-new-user.component';
 import {NotificationComponent} from './components/views/inbox/notification/notification.component';
 import {ProjectTableComponent} from './components/ui-artefacts/tables/project-table/project-table.component';
+import {FilterEntries} from './pipes/filter.pipe';
 
 export const Components: Array<any> = [
   LoginComponent,
@@ -42,4 +43,5 @@ export const Components: Array<any> = [
   AddNewUserComponent,
   NotificationComponent,
   ProjectTableComponent,
+  FilterEntries,
 ];

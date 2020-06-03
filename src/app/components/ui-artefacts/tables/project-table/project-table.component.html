@@ -9,7 +9,7 @@
     <th>Status</th>
   </tr>
   </thead>
-  <tbody  *ngFor="let project of filteredProjects">
+  <tbody  *ngFor="let project of filteredProjects | filterEntries: filterConfig">
   <tr>
     <td class="table-profile">
       <svg class="table-profile__icon">

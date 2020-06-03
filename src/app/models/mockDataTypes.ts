@@ -17,6 +17,7 @@ export class Departments {
 }
 
 export class Project {
+  recentEdit: boolean;
   id: number;
   link: string;
   name: string;
@@ -48,9 +49,21 @@ export class NotificationEntry {
     id: number;
   };
   position?: string;
+  isConfirmed?: boolean;
 }
 
 export class BreadcrumbData {
   name: string;
   path: string;
+}
+
+export class FilterEntry {
+  name: string;
+  property: string;
+  value: any;
+}
+
+export class FilterConfig {
+  prop: string;
+  value: any;
 }

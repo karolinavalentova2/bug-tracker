@@ -1,4 +1,3 @@
 <div class="side-filter">
-  <a><p class="par3 side-filter__entry">Recent projects</p></a>
-  <a><p class="par3 side-filter__entry">All projects</p></a>
+  <p class="par3 side-filter__entry" *ngFor="let label of labels"><a (click)="doFilterBy(label.property, label.value)">{{label.name}}</a></p>
 </div>

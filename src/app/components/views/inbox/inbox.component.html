@@ -1,17 +1,14 @@
-<app-side-filter></app-side-filter>
+<app-side-filter [labels]="filterEntries" (filterConfig)="doListenToFilterChanged($event)"></app-side-filter>
 <div class="main-view">
   <div class="main-view__header">
     <div class="main-view__header__headline">
       <h1 class="header3__m">Inbox</h1>
-      <p class="par3">Active, unread notifications</p>
+      <p class="par3">{{filterConfig.value === true ? 'Archived, read notifications' : 'Active, unread notifications'}}</p>
     </div>
   </div>
-<!--  <div class="inbox">-->
-<!--    <app-notification *ngFor="let notifEntry of mockNotification" [notifInfo]="notifEntry"></app-notification>-->
-<!--  </div>-->
   <table class="inbox">
     <tbody>
-      <app-notification *ngFor="let notifEntry of mockNotification" [notifInfo]="notifEntry"></app-notification>
+      <app-notification *ngFor="let notifEntry of mockNotification | filterEntries:filterConfig" [notifInfo]="notifEntry"></app-notification>
     </tbody>
   </table>
 </div>

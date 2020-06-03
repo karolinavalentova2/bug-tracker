@@ -1,6 +1,8 @@
 import {Injectable} from '@angular/core';
-import {Subject} from 'rxjs';
+import {Observable, Subject} from 'rxjs';
 import {NavigationEnd, Router} from '@angular/router';
+import {navPaths} from '../models/mockDataModels/navigationPaths';
+import {BreadcrumbData} from '../models/mockDataTypes';
 @Injectable({
   providedIn: 'root',
 })
@@ -8,6 +10,9 @@ import {NavigationEnd, Router} from '@angular/router';
 export class NavigationService {
   private lastActiveURLPath: string;
   private navSubject = new Subject<string>();
+
+  private breadcrumbsSubject = new Subject<BreadcrumbData[]>();
+  private currentBreadcrumbData: BreadcrumbData[] = [];
   constructor(private routerService: Router) {
     this.doWatchURL();
   }
@@ -16,7 +21,7 @@ export class NavigationService {
     return this.navSubject.asObservable();
   }
 
-  doReturnLastActiveURLPath() {
+  public doReturnLastActiveURLPath() {
     return this.lastActiveURLPath;
   }
 
@@ -28,6 +33,26 @@ export class NavigationService {
         this.navSubject.next(val.urlAfterRedirects);
       }
     });
+  }
+
+  public doAddBreadcrumbEntries(entries: BreadcrumbData[]) {
+    this.currentBreadcrumbData = entries;
+
+    this.breadcrumbsSubject.next(this.currentBreadcrumbData);
+  }
+
+  public doDeleteBreadcrumbEntry(position?: number) {
+    if(position) {
+      this.currentBreadcrumbData = this.currentBreadcrumbData.splice(position);
+    } else {
+      this.currentBreadcrumbData = [];
+    }
+
+    this.breadcrumbsSubject.next(this.currentBreadcrumbData);
+  }
+
+  public doListenBreadcrumbForData(): Observable<BreadcrumbData[]> {
+    return this.breadcrumbsSubject.asObservable();
   }
 
   public doNavigate(path?: string) {

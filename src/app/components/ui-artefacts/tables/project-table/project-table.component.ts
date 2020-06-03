@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {IconsURIs} from '../../../../models/icons';
-import {Project} from '../../../../models/mockDataTypes';
+import {FilterConfig, Project} from '../../../../models/mockDataTypes';
 
 @Component({
   selector: 'app-project-table',
@@ -10,6 +10,7 @@ import {Project} from '../../../../models/mockDataTypes';
 export class ProjectTableComponent implements OnInit {
   @Input() Projects: Array<Project>;
   @Input() showOn: {property: string; value: any; };
+  @Input() filterConfig: FilterConfig;
   icons = IconsURIs;
   isChecked: boolean;
   filteredProjects: Array<Project> = [];

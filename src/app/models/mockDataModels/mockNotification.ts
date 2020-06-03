@@ -2,6 +2,7 @@ import {NotificationEntry} from '../mockDataTypes';
 
 export const mockNotification: NotificationEntry[] = [
   {
+    isConfirmed: true,
     type: 'newProject',
     date: new Date(),
     sender:
@@ -20,6 +21,7 @@ export const mockNotification: NotificationEntry[] = [
       },
   },
   {
+    isConfirmed: false,
     type: 'assignedToProject',
     date: new Date(),
     sender:
@@ -39,6 +41,7 @@ export const mockNotification: NotificationEntry[] = [
       },
   },
   {
+    isConfirmed: true,
     type: 'assignedToIssue',
     date: new Date(),
     sender:
@@ -63,6 +66,7 @@ export const mockNotification: NotificationEntry[] = [
       },
   },
   {
+    isConfirmed: true,
     type: 'newIssue',
     date: new Date(),
     sender:
@@ -87,6 +91,7 @@ export const mockNotification: NotificationEntry[] = [
       },
   },
   {
+    isConfirmed: true,
     type: 'deletedIssue',
     date: new Date(),
     sender:
@@ -111,6 +116,7 @@ export const mockNotification: NotificationEntry[] = [
       },
   },
   {
+    isConfirmed: true,
     type: 'deletedProject',
     date: new Date(),
     sender:
@@ -130,6 +136,7 @@ export const mockNotification: NotificationEntry[] = [
       },
   },
   {
+    isConfirmed: true,
     type: 'newProject',
     date: new Date(),
     sender:
@@ -148,6 +155,7 @@ export const mockNotification: NotificationEntry[] = [
       },
   },
   {
+    isConfirmed: false,
     type: 'assignedToProject',
     date: new Date(),
     sender:
@@ -167,6 +175,7 @@ export const mockNotification: NotificationEntry[] = [
       },
   },
   {
+    isConfirmed: false,
     type: 'deletedIssue',
     date: new Date(),
     sender:
@@ -191,6 +200,7 @@ export const mockNotification: NotificationEntry[] = [
       },
   },
   {
+    isConfirmed: false,
     type: 'assignedToIssue',
     date: new Date(),
     sender:
@@ -215,6 +225,7 @@ export const mockNotification: NotificationEntry[] = [
       },
   },
   {
+    isConfirmed: false,
     type: 'newProject',
     date: new Date(),
     sender:
@@ -233,6 +244,7 @@ export const mockNotification: NotificationEntry[] = [
       },
   },
   {
+    isConfirmed: false,
     type: 'assignedToProject',
     date: new Date(),
     sender:
@@ -252,6 +264,7 @@ export const mockNotification: NotificationEntry[] = [
       },
   },
   {
+    isConfirmed: false,
     type: 'assignedToIssue',
     date: new Date(),
     sender:
@@ -276,6 +289,7 @@ export const mockNotification: NotificationEntry[] = [
       },
   },
   {
+    isConfirmed: false,
     type: 'assignedToProject',
     date: new Date(),
     sender:
@@ -295,6 +309,7 @@ export const mockNotification: NotificationEntry[] = [
       },
   },
   {
+    isConfirmed: false,
     type: 'deletedIssue',
     date: new Date(),
     sender:
@@ -319,6 +334,7 @@ export const mockNotification: NotificationEntry[] = [
       },
   },
   {
+    isConfirmed: false,
     type: 'assignedToIssue',
     date: new Date(),
     sender:
@@ -343,6 +359,7 @@ export const mockNotification: NotificationEntry[] = [
       },
   },
   {
+    isConfirmed: false,
     type: 'assignedToProject',
     date: new Date(),
     sender:
@@ -362,6 +379,7 @@ export const mockNotification: NotificationEntry[] = [
       },
   },
   {
+    isConfirmed: false,
     type: 'deletedIssue',
     date: new Date(),
     sender:
